@@ -4,12 +4,12 @@
 - **Tên đồ án:** Ứng dụng Mã Hóa (Playfair Cipher & RSA Encryption)
 - **Môn học:** NT101.Q21 - An Toàn Mạng Máy Tính
 - **Lớp:** NT101.Q21
-- **Năm học:** Học kỳ IV
+- **Năm học:** Học kỳ II - 2025 - 2026
 
 ## Thành Viên Nhóm
-- Thành viên 1
-- Thành viên 2
-- Thành viên 3
+- Thành viên 1: Võ Minh Đức
+- Thành viên 2: Ngô Văn Dũng
+- Thành viên 3: Trần Minh Dứcd
 
 ## Mô Tả Đồ Án
 Ứng dụng này thực hiện các thuật toán mã hóa phổ biến trong lĩnh vực bảo mật thông tin:
@@ -60,8 +60,8 @@ python crypto_app.py
 - Hỗ trợ cả tiếng Việt và tiếng Anh
 - Đảm bảo tính bảo mật cơ bản cho học tập
 
-## Tác Giả & Giáo Viên Hướng Dẫn
-- Giáo viên: [Tên giáo viên]
+## Giáo Viên Hướng Dẫn
+- Giáo viên: Tô Nguyễn Nhật Quang
 
 ---
 **Lần cập nhật cuối:** 2026-06-04
