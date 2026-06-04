@@ -99,8 +99,9 @@ def mod_inverse(e, phi):
         quotient = r // newr
         t, newt = newt, t - quotient * newt
         r, newr = newr, r - quotient * newr
-    if r > 1: return None
-    if t < 0: t += phi
+    if r > 1:
+        raise ValueError(f"Không tìm được modular inverse: gcd(e={e}, phi={phi}) ≠ 1. Chọn e khác!")
+    if t < 0: t += phi      
     return t
 
 def is_prime(n):
@@ -313,6 +314,8 @@ class HarmoniousCryptoApp(ctk.CTk):
             q = int(self.rsa_q.get())
         except ValueError:
             raise ValueError("Vui lòng nhập giá trị số nguyên hợp lệ!")
+        if p == q:
+            raise ValueError("p và q phải khác nhau!")
         if not is_prime(p) or not is_prime(q):
             raise ValueError("Cả p và q buộc phải là số nguyên tố!")
         n = p * q
@@ -321,7 +324,11 @@ class HarmoniousCryptoApp(ctk.CTk):
         while e < phi:
             if gcd(e, phi) == 1: break
             e += 2
+        if e >= phi:
+            raise ValueError("Không tìm được giá trị e hợp lệ. Chọn p, q lớn hơn!")
         d = mod_inverse(e, phi)
+        if d is None:
+            raise ValueError("Lỗi tính toán khóa riêng. Thử lại với p, q khác!")
         return e, d, n, phi
 
     def run_rsa_encrypt(self):
