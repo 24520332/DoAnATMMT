@@ -143,7 +143,8 @@ class HarmoniousCryptoApp(ctk.CTk):
         
         self.title("Hệ Thống Mã Hóa Bảo Mật - CRYPTOGRAPHY WORKSPACE")
         self.geometry("900x680")
-        self.resizable(False, False)
+        self.resizable(True, True)
+        self.state('zoomed')  # Phóng to cửa sổ ra toàn màn hình
         
         # Tiêu đề ứng dụng tối giản thanh lịch
         self.title_lbl = ctk.CTkLabel(self, text="DỰ ÁN MÃ HÓA BẢO MẬT", font=ctk.CTkFont(family="Segoe UI", size=24, weight="bold"))
